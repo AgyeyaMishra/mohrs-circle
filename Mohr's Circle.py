@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
     
-def mohcircle():
+def mohrcircle():
     σx = float(input('Enter the value of σx = '))
     σy = float(input('Enter the value of σy = '))
     τxy = float(input('Enter the value of τxy = '))
@@ -56,4 +56,4 @@ def mohcircle():
     plt.title("Mohr's Circle")
     plt.show()
 
-mohcircle()
+mohrcircle()
