@@ -1,1 +1,1 @@
-# mohrs-circle
+# Mohr's Circle
