@@ -1,4 +1,4 @@
-# Mohr's Circle
+# Mohr's Circle Calculator
 
 This is a really small personal project done for **Department of Civil Engineering, Delhi Technological University (formerly, Delhi College of Engineering)** for a course in **Mechanics of Solid (Course Code - CE202)**.
 
