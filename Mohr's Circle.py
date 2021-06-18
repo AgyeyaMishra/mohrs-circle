@@ -2,7 +2,7 @@
 # Institute: Delhi Technological University (formerly, Delhi College of Engineering)
 # Language: Python
 # Version: 3.x
-
+# Environment: PyCharm
 
 #This script plots Mohr's Circle when given the two-dimensional state of stress. 
 
