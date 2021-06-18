@@ -1,12 +1,29 @@
+# Author: Agyeya Mishra
+# Institute: Delhi Technological University (formerly, Delhi College of Engineering)
+# Language: Python
+# Version: 3.x
+
+
+#This script plots Mohr's Circle when given the two-dimensional state of stress. 
+
+
+#Importing libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-    
+
+#Function for Mohr's Circle
 def mohrcircle():
+    #Taking user input for normal stress in x-direction
     σx = float(input('Enter the value of σx = '))
+    #Taking user input for normal stress in y-direction
     σy = float(input('Enter the value of σy = '))
+    #Taking user input for tangetial stress in xy plane
     τxy = float(input('Enter the value of τxy = '))
+    #Taking user input for stress unit
     u = input('Enter the stress unit = ')
+    #Taking user input for angle (in degrees of plane's axis from x-axis
+    #Here, positive angles are considered counter clockwise
     w = float(input("Enter the angle (in degrees) of plane's axis from x axis (here, +ve angles are counter clockwise), θ = "))
     θ = math.radians(w)
     R = np.sqrt(0.25 * (σx - σy) ** 2 + (τxy) ** 2)
@@ -19,6 +36,7 @@ def mohrcircle():
     σθ1 = σavg + R * np.cos(2 * np.radians(φ1) + 2 * θ)
     σθ2 = σavg + R * np.cos(2 * np.radians(φ1) + 2 * θ + np.pi)
     τθ = R * np.sin(2 * np.radians(φ1) + 2 * θ)
+    
     print(f'''
        Radius, R = √(0.25*(σx-σy)^2 + τxy^2) 
                = √(0.25*({σx}-{σy})^2 + {τxy}^2)  = {R} {u}
@@ -44,7 +62,8 @@ def mohrcircle():
             {σθ2} {u}
         τθ = R*Sin(2*φ1 + 2*θ)  = {R * np.sin(2 * np.radians(φ1) + 2 * θ)} {u}
        ''')
-
+   
+#Plotting Mohr's Circle
     plt.plot(x, y)
     plt.plot([σavg - R - 10, σavg + R + 10], [0, 0], linestyle='--', color='black')
     plt.plot([σavg, σavg], [-R - 10, R + 10], linestyle='--', color='black')
@@ -54,4 +73,5 @@ def mohrcircle():
     plt.title("Mohr's Circle")
     plt.show()
 
+#Function Call
 mohrcircle()
