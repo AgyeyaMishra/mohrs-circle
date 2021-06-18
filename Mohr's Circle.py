@@ -4,27 +4,36 @@
 # Version: 3.x
 # Environment: PyCharm
 
-#This script plots Mohr's Circle when given the two-dimensional state of stress. 
+# This script plots Mohr's Circle when given the two-dimensional state of stress. 
 
 
 #Importing libraries
+#
+# Numpy is a general-purpose array-processing package in Python.
 import numpy as np
+# Matplotlib is a plotting library for creating static, animated, and interactive visualizations in Python.
+# Pyplot is a Matplotlib module which provides a MATLAB-like interface.
 import matplotlib.pyplot as plt
 import math
 
-#Function for Mohr's Circle
+# Function for Mohr's Circle
 def drawMohrsCircle():
-    #Taking user input for normal stress in x-direction
+    # Taking user input for normal stress in x-direction
     σx = float(input('Enter the value of σx = '))
-    #Taking user input for normal stress in y-direction
+    
+    # Taking user input for normal stress in y-direction
     σy = float(input('Enter the value of σy = '))
-    #Taking user input for tangetial stress in xy plane
+    
+    # Taking user input for tangetial stress in xy plane
     τxy = float(input('Enter the value of τxy = '))
-    #Taking user input for stress unit
+    
+    # Taking user input for stress unit
     u = input('Enter the stress unit = ')
+    
     #Taking user input for angle (in degrees) of plane's axis from x-axis
     #Here, positive angles are considered counter clockwise
     w = float(input("Enter the angle (in degrees) of plane's axis from x axis (here, +ve angles are counter clockwise), θ = "))
+    
     θ = math.radians(w)
     R = np.sqrt(0.25 * (σx - σy) ** 2 + (τxy) ** 2)
     σavg = (σx + σy) / 2
@@ -63,7 +72,7 @@ def drawMohrsCircle():
         τθ = R*Sin(2*φ1 + 2*θ)  = {R * np.sin(2 * np.radians(φ1) + 2 * θ)} {u}
        ''')
    
-#Plotting Mohr's Circle
+# Plotting Mohr's Circle
     plt.plot(x, y)
     plt.plot([σavg - R - 10, σavg + R + 10], [0, 0], linestyle='--', color='black')
     plt.plot([σavg, σavg], [-R - 10, R + 10], linestyle='--', color='black')
@@ -73,5 +82,5 @@ def drawMohrsCircle():
     plt.title("Mohr's Circle")
     plt.show()
 
-#Function Call
+# Function Call
 drawMohrsCircle()
