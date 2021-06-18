@@ -21,30 +21,28 @@ def mohrcircle():
     τθ = R * np.sin(2 * np.radians(φ1) + 2 * θ)
     print(f'''
        Radius, R = √(0.25*(σx-σy)^2 + τxy^2) 
-               = √(0.25*({σx}-{σy})^2 + {τxy}^2)  ={R} {u}
-
-       Average Stress,(acts at the Center of Mohr's Circle) 
+               = √(0.25*({σx}-{σy})^2 + {τxy}^2)  = {R} {u}
+       Average Stress, (which acts at the Center of Mohr's Circle) 
                = σavg = (σx + σy)/2 = ({σx} + {σy})/2 = {σavg} {u}
-
+               
        Principal Stresses:
        σ1 = σavg + R = {σavg} + {R} = {σavg + R} {u}
        σ2 = σavg - R = {σavg} - {R} = {σavg - R} {u}
        
-       Angle σ1 makes with the x-axis, 
+       Angle which σ1 makes with the x-axis, 
        φ1 = 0.5(atan(2*τxy/(σx - σy)) = 0.5 * atan(2*{τxy}/({σx} - {σy})) = {φ1} degrees
-       Angle σ2 makes with x-axis,
+       Angle which σ2 makes with the x-axis,
        φ2 = φ1 + 90 = {φ2} degrees
-
+       
        Maximum Shear Stress = τmax = R = {R} {u}
        It occurs at, α = φ1 + 45 = {φ1 + 45} degrees
-
+       
        Stresses at a plane with axis at θ anticlockwise from x axis, 
         σθ1 = σavg + R* Cos(2φ1 + 2θ) = {σavg} + {R}* Cos({2 * φ1 + 2 * θ})
            = {σθ1}, {u}
         σθ2 = σavg + R* Cos(2φ1 + 2θ + pi) = 
             {σθ2} {u}
         τθ = R*Sin(2*φ1 + 2*θ)  = {R * np.sin(2 * np.radians(φ1) + 2 * θ)} {u}
-
        ''')
 
     plt.plot(x, y)
