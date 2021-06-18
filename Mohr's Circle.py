@@ -47,6 +47,7 @@ def mohrcircle():
        σ1 = σavg + R = {σavg} + {R} = {σavg + R} {u}
        σ2 = σavg - R = {σavg} - {R} = {σavg - R} {u}
        
+       #The direction of principal planes differ from each other by an angle of 90 degrees.
        Angle which σ1 makes with the x-axis, 
        φ1 = 0.5(atan(2*τxy/(σx - σy)) = 0.5 * atan(2*{τxy}/({σx} - {σy})) = {φ1} degrees
        Angle which σ2 makes with the x-axis,
