@@ -22,7 +22,7 @@ def mohrcircle():
     τxy = float(input('Enter the value of τxy = '))
     #Taking user input for stress unit
     u = input('Enter the stress unit = ')
-    #Taking user input for angle (in degrees of plane's axis from x-axis
+    #Taking user input for angle (in degrees) of plane's axis from x-axis
     #Here, positive angles are considered counter clockwise
     w = float(input("Enter the angle (in degrees) of plane's axis from x axis (here, +ve angles are counter clockwise), θ = "))
     θ = math.radians(w)
