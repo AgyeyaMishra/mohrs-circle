@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import math
 
 #Function for Mohr's Circle
-def mohrcircle():
+def drawMohrsCircle():
     #Taking user input for normal stress in x-direction
     σx = float(input('Enter the value of σx = '))
     #Taking user input for normal stress in y-direction
@@ -74,4 +74,4 @@ def mohrcircle():
     plt.show()
 
 #Function Call
-mohrcircle()
+drawMohrsCircle()
